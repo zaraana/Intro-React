@@ -12,7 +12,7 @@ body {
 button {
     cursor: pointer;
     padding: 0 16px;
-    background: #1E6F9F;
+    background: #1F75FE;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -36,8 +36,8 @@ header{
 }
 
 img{
-    width: 155px;
-    height: 155px;
+    width: 95px;
+    height: 90px;
     margin-bottom: 20px;}
 
 form{
@@ -75,8 +75,10 @@ section.container{
 section.filter{
     display: flex;
     align-items: center;
+    justify-content:center;
     justify-content: space-between;
     margin-bottom: 24px;
+    justify-items: center;
 }
 
 section div{

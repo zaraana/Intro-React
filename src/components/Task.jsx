@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { BsTrashFill } from "react-icons/bs";
-import { RiCheckboxFill, RiCheckboxBlankLine, RiEdit2Fill, RiCheckFill } from "react-icons/ri";
+import { RiCheckboxFill, RiCheckboxBlankLine, RiCheckFill }
+from "react-icons/ri";
 import PropTypes from 'prop-types';
+import { LuClipboardEdit } from "react-icons/lu";
 
 export default function Task({ task, onDelete, onComplete, onEdit }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -32,7 +34,7 @@ export default function Task({ task, onDelete, onComplete, onEdit }) {
     <div className="task">
       <section className="tasks">
         <button className="checkbox" onClick={() => onComplete(task.id)}>
-          {task.isCompleted ? <RiCheckboxFill /> : <RiCheckboxBlankLine />}
+          {task.isCompleted ? <RiCheckboxFill size={20} /> : <RiCheckboxBlankLine size={20} />}
         </button>
 
         {isEditing ? (
@@ -53,15 +55,15 @@ export default function Task({ task, onDelete, onComplete, onEdit }) {
       <section className="taskEditDltBtn">
         {isEditing ? (
           <button className="saveBtn" onClick={handleSaveClick}>
-            <RiCheckFill size={20} />
+            <RiCheckFill size={20} color="green" />
           </button>
         ) : (
           <button className="editBtn" onClick={handleEditClick}>
-            <RiEdit2Fill size={20} />
+            <LuClipboardEdit size={20}/>
           </button>
         )}
         <button className="deleteBtn" onClick={() => onDelete(task.id)}>
-          <BsTrashFill size={20} />
+          <BsTrashFill size={20} color="red" />
         </button>
       </section>
     </div>

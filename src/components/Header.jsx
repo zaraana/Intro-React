@@ -19,7 +19,8 @@ export default function Header({ handleAddTask }) {
 
   return (
     <header>
-      <img src="src/Assets/images/logo2-removebg-preview.png" alt="Logo" />
+      <img src="src/Assets/images/daily-task.png" alt="Logo" />
+      <h1>Ɱყ ƬօƊօ Ɑƥƥ</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
