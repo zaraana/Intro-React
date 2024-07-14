@@ -7,6 +7,7 @@ export default defineConfig({
   server: {
     open: true,
     port: 5173,
+    base: '/Intro-React/',
     mimeTypes: {
       'application/javascript': ['js', 'jsx']
     }
