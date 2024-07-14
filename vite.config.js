@@ -8,6 +8,9 @@ export default defineConfig({
     open: true,
     port: 5173,
     base: '/Intro-React/',
+    build: {
+      outDir: 'dist' // Ensure the output directory is 'dist'
+    },
     mimeTypes: {
       'application/javascript': ['js', 'jsx']
     }
