@@ -3,6 +3,7 @@
 import React  from 'react';
 import { MdAddTask } from "react-icons/md";
 import PropTypes from 'prop-types';
+import logo from './../Assets/images/daily-task.png';
 
 export default function Header({ handleAddTask }) {
   const [title, setTitle] = React.useState("");
@@ -19,7 +20,7 @@ export default function Header({ handleAddTask }) {
 
   return (
     <header>
-      <img src="src/Assets/images/daily-task.png" alt="Logo" />
+      <img src={logo} alt="Logo" />
       <h1>Ɱყ ƬօƊօ Ɑƥƥ</h1>
       <form onSubmit={handleSubmit}>
         <input

@@ -1,6 +1,8 @@
 
 import Task from "./Task";
 import PropTypes from 'prop-types';
+import done from "./../Assets/images/done.png";
+import pending from "./../Assets/images/pending.png";
 
 export default function Tasks({ tasks, onComplete, onDelete, onEdit }) {
   const tasksQuantity = tasks.length;
@@ -32,12 +34,12 @@ export default function Tasks({ tasks, onComplete, onDelete, onEdit }) {
     <section className="container">
       <section className="filter">
         <div>
-          <img style={img} src="src/Assets/images/pending.png" alt="" />
+          <img style={img} src={pending} alt="pending" />
           <p style={pPending}>Pending</p>
           <span>{tasksQuantity}</span>
         </div>
         <div>
-          <img style={img} src="src/Assets/images/done.png" alt="" />
+          <img style={img} src={done} alt="done" />
           <p style={pCompleted}>Completed</p>
           <span>{completedTasks} of {tasksQuantity}</span>
         </div>
